@@ -3,11 +3,10 @@
     'name': "Create Your App",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Create Your App""",
 
     'description': """
-        Long description of module's purpose
+       Create Your App
     """,
 
     'author': "Yasser Omar",
