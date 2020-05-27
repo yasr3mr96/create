@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+
+    <record id="field_save" model="ir.ui.view">
+      <field name="name">Extract To Code</field>
+      <field name="model">save.save</field>
+      <field name="arch" type="xml">
+          <form string="">
+              <sheet>
+                  <group>
+                      <field name="module_name"/>
+                  </group>
+                   <footer>
+                    <button name="save" string="Extract To Code" type="object" default_focus="1" class="oe_highlight" />
+                   </footer>
+              </sheet>
+
+          </form>
+      </field>
+  </record>
+
+    <record id="save_action" model="ir.actions.act_window">
+        <field name="name">Extract To Code</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">save.save</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="field_save"/>
+        <field name="target">new</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            <!-- Add Text Here -->
+          </p><p>
+            <!-- More details about what a user can do with this object will be OK -->
+          </p>
+        </field>
+    </record>
+
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="save_menu" name="Extract To Code" parent="myroot" action="save_action" sequence="4"/>
+  </data>
+</odoo>

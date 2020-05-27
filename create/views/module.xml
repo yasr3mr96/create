@@ -1,0 +1,39 @@
+<odoo>
+  <data>
+
+    <record id="module_form" model="ir.ui.view">
+      <field name="name">Create Module</field>
+      <field name="model">module.module</field>
+      <field name="arch" type="xml">
+          <form string="">
+              <sheet>
+                  <group>
+                      <field name="name"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+  </record>
+
+    <record id="module_action" model="ir.actions.act_window">
+        <field name="name">Create Module</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">module.module</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            <!-- Add Text Here -->
+          </p><p>
+            <!-- More details about what a user can do with this object will be OK -->
+          </p>
+        </field>
+    </record>
+
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+    <menuitem id="myroot" name="Create"/>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="module_menu" name="Create Module" parent="myroot" action="module_action" sequence="1"/>
+
+  </data>
+</odoo>

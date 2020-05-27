@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+
+    <record id="field_form" model="ir.ui.view">
+      <field name="name">Create Fields</field>
+      <field name="model">field.field</field>
+      <field name="arch" type="xml">
+          <form string="">
+              <sheet>
+                  <group>
+                      <field name="name"/>
+                      <field name="string"/>
+                      <field name="type"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+  </record>
+  </data>
+</odoo>

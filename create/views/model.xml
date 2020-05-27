@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+
+        <record id="model_form" model="ir.ui.view">
+            <field name="name">Create Model</field>
+            <field name="model">model.model</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="menu_name"/>
+                            <field name="module_name"/>
+                            <field name="fields">
+                                <tree editable="bottom">
+                                    <field name="name" width="20%"/>
+                                    <field name="string" width="20%"/>
+                                    <field name="type" width="20%"/>
+                                    <field name="required" width="20%"/>
+                                    <field name="readonly" width="20%"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="model_action" model="ir.actions.act_window">
+            <field name="name">Create Model</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model.model</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+
+        <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="model_menu" name="Create Model" parent="myroot" action="model_action" sequence="2"/>
+    </data>
+</odoo>
